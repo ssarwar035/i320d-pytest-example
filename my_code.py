@@ -19,4 +19,6 @@ def test_handle_different_phone_number_formats():
   assert fix_phone_num("555-442-98761") == "(555) 442-9876"
   assert fix_phone_num("(321) 654 3333") == "(321) 654-3333"
 
-
+def test_fix_error():
+  assert fix_phone_num("555-442-98761") == "(555) 442-9876"
+  assert fix_phone_num("(321) 654 3333") == "(321) 654-3333"
